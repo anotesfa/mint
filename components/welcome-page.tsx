@@ -182,7 +182,7 @@ function LeaderCard({
     <>
       <div
         className={`overflow-hidden rounded-xl border border-border bg-muted ${
-          featured ? "aspect-[4/3] w-full max-w-[220px]" : "aspect-[4/3] w-full"
+          featured ? "aspect-[4/3] w-full max-w-[320px]" : "aspect-[4/3] w-full"
         }`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -194,11 +194,11 @@ function LeaderCard({
         />
       </div>
       <p
-        className={`mt-2 font-semibold text-primary ${featured ? "text-sm" : "text-[13px]"} leading-snug text-balance`}
+        className={`mt-2.5 font-semibold text-primary ${featured ? "text-lg" : "text-[15px]"} leading-snug text-balance`}
       >
         {leader.name}
       </p>
-      <p className={`text-foreground/70 leading-snug text-pretty ${featured ? "text-sm" : "text-xs"}`}>
+      <p className={`text-foreground/70 leading-snug text-pretty ${featured ? "text-base" : "text-sm"}`}>
         {leader.title}
       </p>
     </>
@@ -319,7 +319,7 @@ export function WelcomePage({ onExplore }: WelcomePageProps) {
   const [openLeader, setOpenLeader] = useState<Leader | null>(null)
 
   return (
-    <div className="mx-auto grid h-full w-full max-w-[1400px] grid-cols-1 items-center gap-6 px-5 py-6 md:grid-cols-2 md:gap-10 md:px-8">
+    <div className="mx-auto grid h-full w-full max-w-[1500px] grid-cols-1 items-center gap-6 px-5 py-6 md:grid-cols-[3fr_7fr] md:gap-10 md:px-8">
       {/* Left */}
       <section className="flex flex-col items-start justify-center">
         <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
@@ -346,22 +346,22 @@ export function WelcomePage({ onExplore }: WelcomePageProps) {
 
       {/* Right — leadership structure */}
       <section className="flex h-full min-h-0 flex-col justify-center">
-        <div className="relative flex min-h-0 flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[0_20px_60px_-30px_rgba(8,105,118,0.45)] md:p-8">
-          <h2 className="text-center font-display text-xl font-bold tracking-tight text-primary md:text-2xl">
+        <div className="relative flex min-h-0 flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[0_20px_60px_-30px_rgba(8,105,118,0.45)] md:p-10">
+          <h2 className="text-center font-display text-2xl font-bold tracking-tight text-primary md:text-3xl">
             Ministry Leadership
           </h2>
-          <p className="mx-auto mt-1 max-w-sm text-center text-xs text-muted-foreground">
+          <p className="mx-auto mt-1.5 max-w-md text-center text-sm text-muted-foreground">
             Select a State Minister or Advisor to view their sector directory.
           </p>
 
           {/* Minister (featured, not clickable) */}
-          <div className="mt-5 flex flex-col items-center">
+          <div className="mt-7 flex flex-col items-center">
             <LeaderCard leader={minister} featured />
-            <div className="mt-4 h-4 w-px bg-border" aria-hidden="true" />
+            <div className="mt-5 h-5 w-px bg-border" aria-hidden="true" />
           </div>
 
           {/* Three clickable leaders */}
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-3">
             {leaders.map((leader) => (
               <LeaderCard key={leader.id} leader={leader} onOpen={setOpenLeader} />
             ))}
