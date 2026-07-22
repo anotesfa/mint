@@ -431,7 +431,7 @@ const buildingBOffices: Office[] = [
       name: "Mrs. Yenenesh Alemayehu",
       position: "Head of Records & Archives Management Services",
       positionAmharic: "የሪከርድና ማህደር ስራ አመራር አገልግሎት ኃላፊ",
-      photo: PLACEHOLDER_PHOTO,
+      photo: "/images/manager%20images/yenenesh%20alemayehu.jpg",
       telephone: "+251 11 552 4005",
       email: "records@mint.gov.et",
     },
