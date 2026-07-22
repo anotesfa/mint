@@ -48,7 +48,12 @@ export default function Page() {
           className="h-full animate-fade-in"
         >
           {view.page === "welcome" ? (
-            <WelcomePage onExplore={() => setView({ page: "portal" })} />
+            <WelcomePage
+              onExplore={() => setView({ page: "portal" })}
+              onNavigateOffice={(buildingId, officeId) =>
+                setView({ page: "building", buildingId, focusOfficeId: officeId })
+              }
+            />
           ) : null}
 
           {view.page === "portal" ? (
