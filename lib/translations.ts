@@ -13,14 +13,14 @@ export const t = {
 
     // Welcome page
     ministryWayfinding: "Ministry Wayfinding System",
-    findAnyOffice: "MInT Leaders",
-    anywhereInMint: "Office Locator",
+    findAnyOffice: "Find any office,",
+    anywhereInMint: "anywhere in MInT.",
     welcomeDesc:
       "Instantly locate ministry offices, departments, managers, room numbers and buildings across the Ministry of Innovation and Technology.",
     buildings: "Buildings",
     offices: "Offices",
     departments: "Departments",
-    explorePortal: "Click to Explore the leaders",
+    explorePortal: "Explore Ministry Portal",
     ministryLeadership: "Ministry Leadership",
     clickLeader: "Click a leader to explore their sector",
     allOfficesOpen: "All offices open",
@@ -34,8 +34,8 @@ export const t = {
       researchInnovation: "State Minister, Research & Innovation",
       ictDigital: "State Minister, ICT & Digital Economy",
       advisory: "Advisory State Minister",
-      headMinistersOffice: "Head of Minister's Office",
-      chiefAdmin: "Chief Administration",
+      headMinistersOffice: "Head of Minister's Office & Partnership",
+      chiefAdmin: "Chief Executive, Operations & Admin",
     },
     leaderNames: {
       minister: "H.E. Dr. Belete Molla Getahun",
@@ -117,14 +117,14 @@ export const t = {
 
     // Welcome page
     ministryWayfinding: "የሚኒስቴር መምሪያ ስርዓት",
-    findAnyOffice: "የማን ቢሮ ነው",
-    anywhereInMint: "የሚፈልጉት?",
+    findAnyOffice: "ማንኛውንም ቢሮ ፈልጉ፣",
+    anywhereInMint: "በሚኒስቴሩ ውስጥ የትም።",
     welcomeDesc:
       "በፈጠራና ቴክኖሎጂ ሚኒስቴር ውስጥ ያሉ ቢሮዎችን፣ ክፍሎችን፣ ሥራ አስኪያጆችን፣ የክፍል ቁጥሮችን እና ህንጻዎችን በቅጽበት ይፈልጉ።",
     buildings: "ህንጻዎች",
     offices: "ቢሮዎች",
     departments: "ክፍሎች",
-    explorePortal: "መሪዎቹን ለማስሰስ ጠቅ ያድርጉ",
+    explorePortal: "የሚኒስቴር ፖርታልን ያስሱ",
     ministryLeadership: "የሚኒስቴር አመራር",
     clickLeader: "ዘርፋቸውን ለማስሰስ መሪ ይምረጡ",
     allOfficesOpen: "ሁሉም ቢሮዎች ክፍት ናቸው",
@@ -138,8 +138,8 @@ export const t = {
       researchInnovation: "ሚኒስትር ዴኤታ፣ ምርምርና ፈጠራ",
       ictDigital: "ሚኒስትር ዴኤታ፣ አይሲቲና ዲጂታል ኢኮኖሚ",
       advisory: "አማካሪ ሚኒስትር ዴኤታ",
-      headMinistersOffice: "የሚኒስትር ቢሮ ኃላፊ",
-      chiefAdmin: "ዋና አስተዳደር",
+      headMinistersOffice: "የሚኒስትር ቢሮ ኃላፊ እና አጋርነት",
+      chiefAdmin: "ዋና ስራ አስፈጻሚ፣ ስራ አፈጻጸምና አስተዳደር",
     },
     leaderNames: {
       minister: "ዶ/ር በለጠ ሞላ ጌታሁን",

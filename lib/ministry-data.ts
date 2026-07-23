@@ -173,8 +173,8 @@ const buildingAOffices: Office[] = [
   },
   {
     id: "advisory-state-minister",
-    name: "Advisory State Minister",
-    amharic: "አማካሪ ሚኒስትር ዴኤታ",
+    name: "Advisory State Minister Sector",
+    amharic: "አማካሪ ሚኒስትር ዴኤታ ዘርፍ",
     icon: "scroll",
     work: "Provides advisory support on policy, communications, legal, audit, ethics, institutional change and social inclusion across the Ministry.",
     workAmharic: "በሚኒስቴሩ ውስጥ በፖሊሲ፣ ኮሙዩኒኬሽን፣ ሕግ፣ ኦዲት፣ ሥነ-ምግባር፣ ተቋማዊ ለውጥ እና ማህበራዊ አካታችነት ላይ አማካሪ ድጋፍ ይሰጣል።",

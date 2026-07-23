@@ -215,17 +215,6 @@ export function WelcomePage({ language, onExplore, onNavigateOffice }: WelcomePa
             <div className="h-1 w-full bg-gradient-to-r from-primary via-[#c08a2e] to-primary" />
 
             <div className="px-5 pb-5 pt-4 md:px-6 md:pt-5">
-              {/* header row */}
-              <div className="mb-4 flex items-center justify-between">
-                <div>
-                  <h2 className="font-display text-lg font-black tracking-tight text-foreground">{tr.ministryLeadership}</h2>
-                </div>
-                <span className="hidden items-center gap-1.5 rounded-xl border border-border bg-muted/60 px-3 py-1.5 text-[11px] font-semibold text-muted-foreground sm:flex">
-                  <span className="size-1.5 rounded-full bg-emerald-500" />
-                  {tr.allOfficesOpen}
-                </span>
-              </div>
-
               {/* ── Minister: centered hero card ── */}
               <div className="mb-4 overflow-hidden rounded-2xl border border-[#c08a2e]/30 bg-gradient-to-br from-primary/5 via-accent/40 to-[#c08a2e]/8 shadow-sm">
                 <div className="h-0.5 w-full bg-gradient-to-r from-primary/40 via-[#c08a2e] to-primary/40" />
