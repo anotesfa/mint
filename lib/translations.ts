@@ -117,8 +117,8 @@ export const t = {
 
     // Welcome page
     ministryWayfinding: "የሚኒስቴር መምሪያ ስርዓት",
-    findAnyOffice: "ማንኛውንም ቢሮ ፈልጉ፣",
-    anywhereInMint: "በሚኒስቴሩ ውስጥ የትም።",
+    findAnyOffice: "የማንን ቢሮ",
+    anywhereInMint: "ይፈልጋሉ?",
     welcomeDesc:
       "በፈጠራና ቴክኖሎጂ ሚኒስቴር ውስጥ ያሉ ቢሮዎችን፣ ክፍሎችን፣ ሥራ አስኪያጆችን፣ የክፍል ቁጥሮችን እና ህንጻዎችን በቅጽበት ይፈልጉ።",
     buildings: "ህንጻዎች",
