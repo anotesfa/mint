@@ -106,21 +106,21 @@ export function PortalHeader({
               onClick={() => setLangOpen((p) => !p)}
               aria-haspopup="listbox"
               aria-expanded={langOpen}
-              className="inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-white/12 px-3 py-1.5 ring-1 ring-white/20 transition-all hover:bg-white/18 active:scale-95"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-white/30 bg-white/20 px-4 py-2 transition-all hover:bg-white/30 active:scale-95"
             >
-              <Globe className="size-3.5 text-header-foreground/80" />
-              <span className="text-[11px] font-semibold tracking-wide text-header-foreground/80 md:text-xs">
-                {activeLang.short}
+              <Globe className="size-4 text-white" />
+              <span className="text-sm font-extrabold uppercase tracking-widest text-white">
+                {activeLang.label}
               </span>
-              <ChevronDown className={`size-3.5 text-header-foreground/60 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`} />
+              <ChevronDown className={`size-4 text-white transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`} />
             </button>
 
             {langOpen && (
               <div
                 role="listbox"
-                className="animate-fade-in absolute right-0 top-[calc(100%+8px)] w-40 overflow-hidden rounded-xl border border-border bg-card p-1 text-foreground shadow-[0_18px_45px_-12px_rgba(8,105,118,0.35)]"
+                className="animate-fade-in absolute right-0 top-[calc(100%+6px)] w-52 overflow-hidden rounded-md border-2 border-primary/40 bg-white shadow-[0_8px_30px_rgba(8,105,118,0.35)]"
               >
-                {LANGUAGES.map((lang) => {
+                {LANGUAGES.map((lang, idx) => {
                   const isActive = lang.code === language;
                   return (
                     <button
@@ -129,12 +129,16 @@ export function PortalHeader({
                       role="option"
                       aria-selected={isActive}
                       onClick={() => { onLanguageChange(lang.code); setLangOpen(false); }}
-                      className={`flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium transition-colors ${
-                        isActive ? "bg-primary/10 text-primary" : "text-foreground/80 hover:bg-accent"
+                      className={`flex w-full cursor-pointer items-center justify-between px-5 py-4 text-left text-[15px] font-extrabold uppercase tracking-wider transition-colors ${
+                        idx > 0 ? "border-t border-gray-100" : ""
+                      } ${
+                        isActive
+                          ? "bg-primary text-white"
+                          : "bg-white text-gray-800 hover:bg-primary/8 hover:text-primary"
                       }`}
                     >
                       {lang.label}
-                      {isActive && <Check className="size-4 text-primary" />}
+                      {isActive && <Check className="size-5" />}
                     </button>
                   );
                 })}
