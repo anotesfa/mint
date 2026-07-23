@@ -67,6 +67,7 @@ export default function Page() {
               language={language}
               onViewBuilding={(buildingId) => setView({ page: "building", buildingId })}
               onSearchSelect={handleSearchSelect}
+              onGoHome={() => setView({ page: "welcome" })}
             />
           )}
 
