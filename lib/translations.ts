@@ -13,14 +13,14 @@ export const t = {
 
     // Welcome page
     ministryWayfinding: "Ministry Wayfinding System",
-    findAnyOffice: "Find any office,",
-    anywhereInMint: "anywhere in MInT.",
+    findAnyOffice: "MInT Leaders",
+    anywhereInMint: "Office Locator",
     welcomeDesc:
       "Instantly locate ministry offices, departments, managers, room numbers and buildings across the Ministry of Innovation and Technology.",
     buildings: "Buildings",
     offices: "Offices",
     departments: "Departments",
-    explorePortal: "Explore Ministry Portal",
+    explorePortal: "Click to explore MInT Leaders",
     ministryLeadership: "Ministry Leadership",
     clickLeader: "Click a leader to explore their sector",
     allOfficesOpen: "All offices open",
@@ -34,8 +34,8 @@ export const t = {
       researchInnovation: "State Minister, Research & Innovation",
       ictDigital: "State Minister, ICT & Digital Economy",
       advisory: "Advisory State Minister",
-      headMinistersOffice: "Head of Minister's Office & Partnership",
-      chiefAdmin: "Chief Executive, Operations & Admin",
+      headMinistersOffice: "Head of Minister's Office",
+      chiefAdmin: "Chief Administration",
     },
     leaderNames: {
       minister: "H.E. Dr. Belete Molla Getahun",
