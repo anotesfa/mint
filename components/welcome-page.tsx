@@ -219,7 +219,6 @@ export function WelcomePage({ language, onExplore, onNavigateOffice }: WelcomePa
               <div className="mb-4 flex items-center justify-between">
                 <div>
                   <h2 className="font-display text-lg font-black tracking-tight text-foreground">{tr.ministryLeadership}</h2>
-                  <p className="text-xs text-muted-foreground">{tr.clickLeader}</p>
                 </div>
                 <span className="hidden items-center gap-1.5 rounded-xl border border-border bg-muted/60 px-3 py-1.5 text-[11px] font-semibold text-muted-foreground sm:flex">
                   <span className="size-1.5 rounded-full bg-emerald-500" />
