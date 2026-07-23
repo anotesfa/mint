@@ -186,14 +186,19 @@ export function WelcomePage({ language, onExplore, onNavigateOffice }: WelcomePa
 
           <div className="mt-5 flex flex-wrap gap-2.5">
             {[
-              { value: "2", label: tr.buildings },
-              { value: "10+", label: tr.offices },
-              { value: "20+", label: tr.departments },
-            ].map(({ value, label }) => (
-              <div key={label} className="flex cursor-pointer items-center gap-2 rounded-xl border border-border bg-card px-3.5 py-2 shadow-sm transition-all duration-200 hover:border-primary/30 hover:shadow-md">
+              { value: "2", label: tr.buildings, onClick: onExplore },
+              { value: "10+", label: tr.offices, onClick: onExplore },
+              { value: "20+", label: tr.departments, onClick: onExplore },
+            ].map(({ value, label, onClick }) => (
+              <button
+                key={label}
+                type="button"
+                onClick={onClick}
+                className="flex cursor-pointer items-center gap-2 rounded-xl border border-border bg-card px-3.5 py-2 shadow-sm transition-all duration-200 hover:border-primary/30 hover:shadow-md"
+              >
                 <span className="text-lg font-black text-primary">{value}</span>
                 <span className="text-xs font-semibold text-muted-foreground">{label}</span>
-              </div>
+              </button>
             ))}
           </div>
 
