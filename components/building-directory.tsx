@@ -326,7 +326,7 @@ export function BuildingDirectory({ language, buildingId, focusOfficeId, onHome,
         </div>
       ) : (
         /* ── Office grid ── */
-        <div className="grid min-h-0 flex-1 auto-rows-fr grid-cols-2 gap-3 overflow-hidden md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-3 gap-3 overflow-y-auto pb-2">
           {building.offices.map((office, i) => (
             <button
               key={office.id}
@@ -334,45 +334,48 @@ export function BuildingDirectory({ language, buildingId, focusOfficeId, onHome,
               onClick={() => setSelectedOffice(office.id)}
               data-building={buildingId}
               style={{ animationDelay: `${i * 40}ms` }}
-              className={`office-card group flex h-full min-h-0 cursor-pointer animate-fade-in flex-col overflow-hidden rounded-2xl border border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-1 ${theme.borderHover}`}
+              className={`office-card group cursor-pointer animate-fade-in flex flex-col overflow-hidden rounded-xl border border-border bg-card text-left shadow-sm transition-colors duration-200 hover:border-primary/30 hover:bg-accent/20`}
             >
               {/* Photo banner */}
-              <div className="relative h-24 w-full shrink-0 overflow-hidden bg-muted md:h-28">
+              <div className="relative h-36 w-full shrink-0 overflow-hidden bg-gradient-to-b from-primary/5 to-accent/60">
                 <Image
                   src={office.manager.photo || "/placeholder.svg"}
                   alt={office.manager.name}
                   fill
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.07]"
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-contain object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  sizes="(max-width: 768px) 33vw, 33vw"
                 />
-                <div className={`pointer-events-none absolute inset-0 bg-gradient-to-t ${theme.cardAccent} opacity-0 transition-opacity duration-400 group-hover:opacity-25`} />
-                <span className={`absolute left-2 top-2 rounded-lg ${theme.badgeBg} px-1.5 py-0.5 text-[10px] font-bold ${theme.badgeText} backdrop-blur-sm`}>
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card to-transparent" />
+                <span className={`absolute left-2 top-2 rounded-md ${theme.badgeBg} px-1.5 py-0.5 text-[10px] font-semibold ${theme.badgeText}`}>
                   <OfficeIcon name={office.icon} className="inline size-3 mr-0.5" />
                   {office.officeNumber}
                 </span>
               </div>
 
               {/* Body */}
-              <div className="flex flex-1 flex-col p-3">
-                <h2 className="line-clamp-2 text-xs font-bold leading-snug text-foreground md:text-[13px]">
+              <div className="flex flex-col p-3 gap-1">
+                {/* Office name */}
+                <h2 className="text-sm font-bold leading-snug text-foreground line-clamp-2">
                   {language === "am" && office.amharic ? office.amharic : office.name}
                 </h2>
-                <p className="mt-1.5 line-clamp-2 flex-1 text-[11px] leading-relaxed text-muted-foreground">
+                {/* Work / service */}
+                <p className="text-[11px] leading-relaxed text-muted-foreground line-clamp-2">
                   {language === "am" ? office.workAmharic : office.work}
                 </p>
 
-                <div className="mt-2 border-t border-border pt-2">
-                  <p className="truncate text-xs font-bold text-foreground">{office.manager.name}</p>
-                  <p className="truncate text-[11px] text-muted-foreground">
+                {/* Manager info */}
+                <div className="mt-1 border-t border-border pt-2 flex flex-col gap-0.5">
+                  <p className="text-[13px] font-bold text-foreground">{office.manager.name}</p>
+                  <p className="text-[11px] text-muted-foreground line-clamp-2">
                     {language === "am" ? office.manager.positionAmharic : office.manager.position}
                   </p>
-                  <div className="mt-1 flex items-center gap-1 text-[11px] text-muted-foreground">
+                  <div className="flex items-center gap-1 text-[11px] text-muted-foreground">
                     <Phone className={`size-3 shrink-0 ${theme.accentText}`} />
                     <span className="truncate">{office.manager.telephone}</span>
                   </div>
                 </div>
 
-                <div className={`mt-2 flex items-center justify-between text-[11px] font-bold ${theme.accentText}`}>
+                <div className={`mt-1 flex items-center justify-between text-[11px] font-semibold ${theme.accentText}`}>
                   <span className="flex items-center gap-1">
                     <Users className="size-3.5" />
                     {tr.deptCount(office.departments.length)}
